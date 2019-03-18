@@ -5,7 +5,7 @@
 int arrar[100];
 int main(int argc, const char * argv[])
 {
-	int i,j,number,size;
+    int i,j,number,size;
     srand(time(0));
     printf("\nplease press array size ");
     scanf("%d",&size);
