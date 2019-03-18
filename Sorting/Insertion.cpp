@@ -1,39 +1,41 @@
 #include<stdio.h>
 
-int matrix[10]={2,5,9,1,4,3,6,8,7,0};
-int insert(int matrix[], int number, int len)
+#define size 10
+int array[size]={2,5,9,1,4,3,6,8,7,0};
+
+int insert(int array[], int number, int len)
 {
   int j = len;
-  while(number < matrix[j])
+  while(number < array[j])
   {
-    matrix[j+1] = matrix[j];
+    array[j+1] = array[j];
     j--;
   }
-  matrix[j+1] = number;
+  array[j+1] = number;
   return 0;
 }
 
-int insort(int matrix[], int len) 
+int insort(int array[], int len) 
 {
   int i;
   for(i = 1; i<len; i++)
   {
-      insert(matrix, matrix[i], i-1);
+      insert(array, array[i], i-1);
   }
-  printf("\nNumbers Sorted: ");
-  for(i = 0; i<len; i++)
-  {
-    printf("%d ", matrix[i]);
-  }
-  printf("\n");
   return 0;
 }
  
 int main()
 {
-  printf("\ninsertion sort "); 
+	int i;
+    printf("\ninsertion sort "); 
 
-  insort(matrix, 10);
+    insort(array, size);
+  
+    for(i = 0; i<size; i++)
+    {
+    	printf("%d ", array[i]);
+    }
   return 0;
 }
 
