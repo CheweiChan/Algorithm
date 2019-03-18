@@ -8,14 +8,16 @@ void swap(int *a,int *b)
     int t;
     t=*a;
     *a=*b;
-    *b=t;
-    
+    *b=t;    
 }
 
-int partition(int array[], int left, int right) { 
+int partition(int array[], int left, int right) 
+{ 
     int j=0,i = left - 1; 
-    for(j = left; j < right; j++) { 
-        if(array[j] <= array[right]) { 
+    for(j = left; j < right; j++)
+    { 
+        if(array[j] <= array[right]) 
+	{ 
             i++; 
             swap(&array[i], &array[j]); 
         } 
@@ -25,8 +27,10 @@ int partition(int array[], int left, int right) {
     return i+1; 
 } 
 
-void quickSort(int array[], int left, int right) { 
-    if(left < right) { 
+void quickSort(int array[], int left, int right) 
+{ 
+    if(left < right)
+    { 
         int q = partition(array, left, right); 
         quickSort(array, left, q-1); 
         quickSort(array, q+1, right); 
@@ -35,7 +39,7 @@ void quickSort(int array[], int left, int right) {
 
 int main()
 {
-	int i;
+    int i;
     printf("\nquick sort "); 
 
     quickSort(array,0,9);
