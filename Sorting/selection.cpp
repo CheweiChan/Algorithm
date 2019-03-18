@@ -8,8 +8,7 @@ void swap(int *a,int *b)
     int t;
     t=*a;
     *a=*b;
-    *b=t;
-    
+    *b=t;   
 }
 
 
@@ -18,18 +17,18 @@ void selection(int *array,int len)
 	int i=0,j=0;
 	for(i=0;i<len;i++)
 	{
-		for(j=i+1;j<len;j++)
-		{
-			if(array[i]>array[j])
-				swap(&array[i],&array[j]);			
-		}					
+	    for(j=i+1;j<len;j++)
+	    {
+		if(array[i]>array[j])
+	            swap(&array[i],&array[j]);			
+	    }					
 	}
 }
 
 int main(void)
 {
-	int i;	
-	selection(array,size);
+    int i;	
+    selection(array,size);
     for(i=0;i<size;i++)
     {
         printf("%d ",array[i]);      
