@@ -8,8 +8,8 @@ int insert(int array[], int number, int len)
   int j = len;
   while(number < array[j])
   {
-      array[j+1] = array[j];
-      j--;
+    array[j+1] = array[j];
+    j--;
   }
   array[j+1] = number;
   return 0;
@@ -27,9 +27,11 @@ int insort(int array[], int len)
  
 int main()
 {
-    int i;
+	int i;
     printf("\ninsertion sort "); 
+
     insort(array, size);
+  
     for(i = 0; i<size; i++)
     {
     	printf("%d ", array[i]);

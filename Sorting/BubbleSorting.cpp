@@ -14,14 +14,16 @@ void swap(int *a,int *b)
 
 void BubbleSort(int* array, int len)
 {
-    for(int i = 0; i < size-1; i++)     
+	int i=0,j=0;
+    for(i = 0; i < size-1; i++)     
     {
-        for(int j = 1; j < size - i; j++)         
+        for(j = 1; j < size - i; j++)         
         {   
             if(array[j] < array[j - 1])       
             {
                 swap(&array[j], &array[j-1]);                  
-            }      
+            }
+            
         }   
     } 
 }
@@ -29,8 +31,8 @@ void BubbleSort(int* array, int len)
 
 int main(void)
 {
-    int i;	
-    BubbleSort(array,size);
+	int i;	
+	BubbleSort(array,size);
     for(i=0;i<size;i++)
     {
         printf("%d ",array[i]);      
