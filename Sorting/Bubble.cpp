@@ -21,8 +21,7 @@ void BubbleSort(int* array, int len)
             if(array[j] < array[j - 1])       
             {
                 swap(&array[j], &array[j-1]);                  
-            }
-            
+            }      
         }   
     } 
 }
@@ -30,8 +29,8 @@ void BubbleSort(int* array, int len)
 
 int main(void)
 {
-	int i;	
-	BubbleSort(array,size);
+    int i;	
+    BubbleSort(array,size);
     for(i=0;i<size;i++)
     {
         printf("%d ",array[i]);      
