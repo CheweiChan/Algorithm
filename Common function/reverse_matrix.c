@@ -6,7 +6,7 @@
 
 static int reverse(int *x,int len)
 {
-int i,temp;
+	int i,temp;
 	for(i=0;i<(len/2);i++)
 	{
 		temp=x[i];
