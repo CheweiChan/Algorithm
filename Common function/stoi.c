@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #define MIN -20000000
-#define MAX 10000000
+#define MAX 100000000
 
 typedef enum 
 {
@@ -29,22 +29,22 @@ static int stoi(char* str)
         if (_isdigit(*s)) 
 		{
             int d = *s - '0';
+            n = n * 10 + d;
             if (sign) 
 			{
-                if (-n <(MIN+d)/10)
+                if (-n <MIN)
 				{
                     n = MIN;
                     break;
                 }
             } else 
 			{
-                if (n > (MAX+d)/10)
+                if (n >MAX)
 				{
                     n = MAX;
                     break;
                 }
             }
-            n = n * 10 + d;
         } 
 		else if (*s == '-' && _isdigit(*(s + 1))) 
             sign = 1;
@@ -62,7 +62,7 @@ static int stoi(char* str)
 int main(void)
 {
 	int num;
-	num = stoi("-1245678");
+	num = stoi("-19999999");
 	printf("\n%d\n",num);
 	
 	
